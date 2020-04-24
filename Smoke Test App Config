@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+
+	<appSettings>
+    <add key="SystemUserUsername" value="AutomatedTests" />
+    <add key="SystemUserPassword" value="5B16BE17-A494-4F2F" />
+    <add key="SystemIdAdmin" value="{3F34DEF3-2077-4E02-903E-89204B395AA8}" />
+    <add key="SystemIdAppCompatibilityAdmin" value="{6259A409-5085-4296-BF82-87F830D4982D}" />
+    <add key="PublisherUsername" value="UnitTestsPublisher" />
+    <add key="PublisherPassword" value="fsdf765%$" />
+    <add key="CountryCode" value="US" />
+    <add key="ResourceFile" value="LegalAgreements" />
+    <add key="ResourceDictionaryKey" value="AgreementsAcceptancePrompt" />
+    <add key="StsClientId" value="0D742E37-71F9-4363-8B25-57D09A05F712" />
+    <add key="ProductIdForShareAdminTool" value="074B3B9E-2A1B-4BA8-8C36-65CEAB3E9D59" />
+    <add key="MaxLoginAttemptsBeforeLockout" value="2" />
+
+
+    <!-- External DEXCOM Test system. -->
+    <add key="ServiceURL" value="https://uat-share-us.dexcomdev.com/ShareWebServices/Services" />
+    <add key="ServiceExURL" value="https://uat-share-us.dexcomdev.com/ShareWebServicesEx1/Services" />
+    <add key="ServiceAdminURL" value="https://uat-shareadmin-us.dexcomdev.com/ShareAdminWebServices/Services" />
+    <add key="ServiceAdminLoginURL" value="https://uat-shareadmin-us.dexcomdev.com/ShareAdminWebServices/Login" />
+    <add key="ServiceAppCompatAdminURL" value="https://uat-shareadmin-us.dexcomdev.com/AppCompatibilityAdminWebServices/Services" />
+    <add key="BulkDataPostServiceURL" value="https://uat-share-us.dexcomdev.com/ShareDataPostWebServices/Services" />
+    <add key="BulkDataSyncServiceURL" value="https://uat-shareadmin-us.dexcomdev.com/ShareDataSyncWebServices/Services" />
+    <add key="LegalServiceURL" value="https://uat-share-us.dexcomdev.com/LegalWebServices/Services" />
+    <add key="StsServiceURL" value="https://uat-uam-us.dexcomdev.com/identity/connect/token" />
+    <!--<add key="LegalServiceURL" value="https://shareous1prodgcp.dexcom.com/LegalWebServices/Services" />
+	  <add key="StsServiceURL" value="https://uam2.dexcom.com/identity/connect/token" />-->
+    <add key="DistributorBulkDataSyncServiceURL" value="https://distributortest1.dexcom.com/US/ShareDataSyncWebServices/Services" />
+    <add key="DistributorTimeoutInSeconds" value="60" />
+		
+		<!-- External DEXCOM development system. -->
+		<!--<add key="ServiceURL" value="https://data8.dexcom.com/ShareWebServices/Services"/>-->
+
+		<!-- Mock Server Testing -->
+		<!--<add key="ServiceURL" value="http://localhost:8082/WS/Share" />
+		<add key="ServiceExURL" value="http://localhost:8082/WS/ShareEx1" />-->
+
+		<!-- Internal DEXCOM development system. -->
+		<!--<add key="ServiceURL" value="http://DexDB5/ShareWebServices/Services"/>-->
+
+		<!-- APNS Testing information. -->
+		<add key="DeviceToken" value="0200ffef171533c7bed712b66c3a0e60780b5315a21ac2510a005fde4ec41da8" />
+		<add key="NotificationService" value="AppleProductionEnterprise" />
+
+		<!--
+		<add key="DeviceToken" value="0200ffef171533c7bed712b66c3a0e60780b5315a21ac2510a005fde4ec41da8"/>
+		<add key="NotificationService" value="AppleProduction"/>
+		
+		<add key="DeviceToken" value="06f19ddd13acc9bce2cb0f1ac5594d2ac4e64294ffbcaa2035d5cc3cded78702"/>
+		<add key="NotificationService" value="AppleDevelopment"/>
+		-->
+
+	</appSettings>
+
+	<startup>
+		<supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.1" />
+	</startup>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+
+			<!-- For ShareSuppot Nuget Dependencies -->
+			<dependentAssembly>
+				<assemblyIdentity name="Dexcom.Common" culture="neutral" publicKeyToken="71077f6d94a459dc" />
+				<bindingRedirect oldVersion="0.0.0.0-10.0.0.31" newVersion="10.0.0.31" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Dexcom.Common.Data" culture="neutral" publicKeyToken="71077f6d94a459dc" />
+				<bindingRedirect oldVersion="0.0.0.0-10.0.0.31" newVersion="10.0.0.31" />
+			</dependentAssembly>
+			<!-- /For ShareSuppot Nuget Dependencies -->
+
+			<dependentAssembly>
+				<assemblyIdentity name="Autofac" culture="neutral" publicKeyToken="17863af14b0044da" />
+				<bindingRedirect oldVersion="0.0.0.0-3.5.0.0" newVersion="3.5.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-10.0.0.0" newVersion="10.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.Owin" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-3.1.0.0" newVersion="3.1.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.IdentityModel.Tokens.Jwt" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-4.0.40306.1554" newVersion="4.0.40306.1554" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.IdentityModel.Protocol.Extensions" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.0.2.33" newVersion="1.0.2.33" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Http" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Net.Http.Formatting" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.Data.Edm" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-5.7.0.0" newVersion="5.7.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.Data.OData" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-5.7.0.0" newVersion="5.7.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Spatial" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-5.7.0.0" newVersion="5.7.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Interactive.Async" publicKeyToken="94bc3704cddfc263" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-3.0.1000.0" newVersion="3.0.1000.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="log4net" publicKeyToken="669e0ddf0bb1aa2a" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.2.15.0" newVersion="1.2.15.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Google.Apis.Auth" publicKeyToken="4b01fa6e34db77ab" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.27.1.0" newVersion="1.27.1.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Google.Apis.Auth.PlatformServices" publicKeyToken="4b01fa6e34db77ab" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.27.1.0" newVersion="1.27.1.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Castle.Core" publicKeyToken="407dd0808d44fbdc" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-3.3.0.0" newVersion="3.3.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="NHibernate" publicKeyToken="aa95f207798dfdb4" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-4.0.0.4000" newVersion="4.0.0.4000" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.Owin.Security" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-3.1.0.0" newVersion="3.1.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.Extensions.Logging.Abstractions" publicKeyToken="adb9793829ddae60" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.1.2.0" newVersion="1.1.2.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.Extensions.Logging" publicKeyToken="adb9793829ddae60" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.1.2.0" newVersion="1.1.2.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Google.Apis.Core" publicKeyToken="4b01fa6e34db77ab" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.38.0.0" newVersion="1.33.1.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Google.Apis" publicKeyToken="4b01fa6e34db77ab" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.38.0.0" newVersion="1.33.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+</configuration>
